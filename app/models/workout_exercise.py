@@ -15,6 +15,7 @@ class WorkoutExercise(Base):
   order_index = Column(Integer, nullable=False)  # Order of exercises in the plan
   notes = Column(Text, nullable=True)
   created_at = Column(DateTime(timezone=True), server_default=func.now())
+  updated_at = Column(DateTime(timezone=True), onupdate=func.now())
 
   # Relationships
   workout_plan = relationship("WorkoutPlan", back_populates="exercises")
