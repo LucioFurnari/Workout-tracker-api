@@ -19,7 +19,7 @@ def get_password_hash(password: str) -> str:
   """ Hash a password """
   return pwd_context.hash(password)
 
-def create_acces_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
+def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
   to_encode = data.copy()
 
   if expires_delta:
