@@ -28,7 +28,7 @@ class WorkoutExerciseResponse(WorkoutExerciseBase):
   created_at: datetime
   updated_at: Optional[datetime] = None
 
-  mode_config = ConfigDict(from_attributes=True)
+  model_config = ConfigDict(from_attributes=True)
 
 # Workout Plan schemas
 class WorkoutPlanBase(BaseModel):
