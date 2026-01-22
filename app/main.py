@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api.v1 import auth
+from app.api.v1 import auth, users
 
 app = FastAPI(
   title="Workout Tracker API",
@@ -9,6 +9,7 @@ app = FastAPI(
 
 # Include routers
 app.include_router(auth.router, prefix="/api/v1/auth", tags=["Authentication"])
+app.include_router(users.router, prefix="/api/v1/users", tags=["Users"])
 
 @app.get("/")
 def read_root():
