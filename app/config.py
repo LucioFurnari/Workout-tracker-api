@@ -14,7 +14,8 @@ class Settings(BaseSettings):
   GOOGLE_CLIENT_SECRET: str = ""
   GOOGLE_REDIRECT_URI: str = ""
 
-  class Config:
-    env_file = ".env"
+  model_config = {"env_file": ".env"}
+  # class Config:
+  #   env_file = ".env"
 
 settings = Settings()
