@@ -103,26 +103,26 @@ workout-tracker/
 ## ⏳ TODO - Next Steps
 
 ### 1. Authentication System (Next Priority)
-- [ ] Install security packages (`python-jose`, `passlib`)
-- [ ] Create `app/core/security.py`
-  - [ ] Password hashing functions
-  - [ ] JWT token creation/verification
-  - [ ] Get current user dependency
-- [ ] Create `app/core/oauth.py`
-  - [ ] Google OAuth integration
-- [ ] Create `app/api/v1/auth.py`
-  - [ ] POST /auth/register - Register with email/password
-  - [ ] POST /auth/login - Login and get JWT token
+- [x] Install security packages (`python-jose`, `passlib`)
+- [x] Create `app/core/security.py`
+  - [x] Password hashing functions
+  - [x] JWT token creation/verification
+  - [x] Get current user dependency
+- [x] Create `app/core/oauth.py`
+  - [x] Google OAuth integration
+- [x] Create `app/api/v1/auth.py`
+  - [x] POST /auth/register - Register with email/password
+  - [x] POST /auth/login - Login and get JWT token
   - [ ] POST /auth/google - OAuth login
   - [ ] POST /auth/refresh - Refresh access token
   - [ ] POST /auth/logout - Logout user
 
 ### 2. User Management
-- [ ] Create `app/services/user_service.py`
-- [ ] Create `app/api/v1/users.py`
-  - [ ] GET /users/me - Get current user
-  - [ ] PUT /users/me - Update profile
-  - [ ] DELETE /users/me - Delete account
+- [x] Create `app/services/user_service.py`
+- [x] Create `app/api/v1/users.py`
+  - [x] GET /users/me - Get current user
+  - [x] PUT /users/me - Update profile
+  - [x] DELETE /users/me - Delete account
 
 ### 3. Exercise Management
 - [ ] Create `app/services/exercise_service.py`
