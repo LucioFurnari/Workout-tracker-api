@@ -2,7 +2,7 @@
 
 A comprehensive workout tracking application built with FastAPI and PostgreSQL that allows users to create, schedule, and manage personalized workout routines.
 
-## 🎯 Project Overview
+## Project Overview
 
 This API enables users to:
 - Create and manage custom workout plans
@@ -11,7 +11,7 @@ This API enables users to:
 - Authenticate via email/password or Google OAuth
 - Categorize exercises by type and muscle group
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend Framework**: FastAPI (Python)
 - **Database**: PostgreSQL
@@ -20,7 +20,7 @@ This API enables users to:
 - **Authentication**: JWT + OAuth 2.0 (Google)
 - **Validation**: Pydantic
 
-## 📊 Database Schema
+## Database Schema
 
 ### Tables
 - **users** - User accounts (email/password + OAuth)
@@ -35,7 +35,7 @@ This API enables users to:
 - Cascade deletes (removing a user deletes their plans)
 - Timestamp tracking on all entities
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 workout-tracker/
@@ -81,7 +81,7 @@ workout-tracker/
 └── README.md
 ```
 
-## ✅ Completed Tasks
+## Completed Tasks
 
 - [x] Project structure setup
 - [x] Database models with SQLAlchemy
@@ -100,7 +100,7 @@ workout-tracker/
   - [x] Scheduled Workout schemas
   - [x] Auth schemas (Token, Login)
 
-## ⏳ TODO - Next Steps
+## TODO - Next Steps
 
 ### 1. Authentication System (Next Priority)
 - [x] Install security packages (`python-jose`, `passlib`)
@@ -167,7 +167,7 @@ workout-tracker/
 - [ ] CI/CD pipeline
 - [ ] Cloud deployment (AWS/GCP/Heroku)
 
-## 🔑 Environment Variables
+## Environment Variables
 
 Create a `.env` file in the project root:
 
@@ -187,7 +187,7 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret
 GOOGLE_REDIRECT_URI=http://localhost:8000/auth/google/callback
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.10+
@@ -237,7 +237,7 @@ uvicorn app.main:app --reload
 - Interactive docs: http://localhost:8000/docs
 - Alternative docs: http://localhost:8000/redoc
 
-## 📝 API Endpoints (Planned)
+## API Endpoints (Planned)
 
 ### Authentication
 - `POST /auth/register` - Register new user
@@ -272,7 +272,7 @@ uvicorn app.main:app --reload
 - `PUT /scheduled-workouts/{id}` - Update scheduled
 - `POST /scheduled-workouts/{id}/complete` - Mark complete
 
-## 🎨 Custom Modifications
+## Custom Modifications
 
 ### Exercise Model Enhancements
 - Added `ExerciseCategory` enum with 5 categories
@@ -282,7 +282,7 @@ uvicorn app.main:app --reload
 ### WorkoutExercise Model Enhancement
 - Added `updated_at` field to track modifications to exercise parameters
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Progress tracking and analytics
 - Exercise video/image uploads
