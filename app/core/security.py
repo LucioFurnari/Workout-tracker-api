@@ -47,12 +47,15 @@ def create_refresh_token(data: dict):
   encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
   return encoded_jwt
 
-def verify_token(token: str) -> Optional[str]:
-  try:
-      payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-      email: str = payload.get("sub")
-      if email is None:
-          return None
-      return email
-  except JWTError:
-      return None
+def verify_token(token: str, token_type: str = "access") -> Optional[str]:
+    """Verify a JWT token and return the email"""
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        email: str = payload.get("sub")
+        token_type_check: str = payload.get("type")
+        
+        if email is None or token_type_check != token_type:
+            return None
+        return email
+    except JWTError:
+        return None
