@@ -16,5 +16,5 @@ class LoginRequest(BaseModel):
 class GoogleAuthRequest(BaseModel):
   token: str  # Google OAuth token
 
-class RefreshTokenResponse(BaseModel):
+class RefreshTokenRequest(BaseModel):
   refresh_token: str
