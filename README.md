@@ -113,9 +113,9 @@ workout-tracker/
 - [x] Create `app/api/v1/auth.py`
   - [x] POST /auth/register - Register with email/password
   - [x] POST /auth/login - Login and get JWT token
-  - [ ] POST /auth/google - OAuth login
-  - [ ] POST /auth/refresh - Refresh access token
-  - [ ] POST /auth/logout - Logout user
+  - [X] POST /auth/google - OAuth login
+  - [X] POST /auth/refresh - Refresh access token
+  <!-- - [ ] POST /auth/logout - Logout user -->
 
 ### 2. User Management
 - [x] Create `app/services/user_service.py`
