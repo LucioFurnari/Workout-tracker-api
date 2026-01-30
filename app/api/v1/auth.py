@@ -10,7 +10,7 @@ from app.services.user_service import (
     authenticate_user,
     get_user_by_email
 )
-from app.core.security import create_access_token
+from app.core.security import create_access_token, create_refresh_token
 from app.config import settings
 
 router = APIRouter()
@@ -54,4 +54,10 @@ def login(
         expires_delta=access_token_expires
     )
     
-    return {"access_token": access_token, "token_type": "bearer"}
+    refresh_token = create_refresh_token(data={"sub": user.email})
+
+    return {
+        "access_token": access_token,
+        "token_type": "bearer",
+        "refresh_token": refresh_token,
+        }
