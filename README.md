@@ -125,13 +125,13 @@ workout-tracker/
   - [x] DELETE /users/me - Delete account
 
 ### 3. Exercise Management
-- [ ] Create `app/services/exercise_service.py`
-- [ ] Create `app/api/v1/exercises.py`
-  - [ ] GET /exercises - List exercises (with filters)
-  - [ ] GET /exercises/{id} - Get exercise details
-  - [ ] POST /exercises - Create exercise
-  - [ ] PUT /exercises/{id} - Update exercise
-  - [ ] DELETE /exercises/{id} - Delete exercise
+- [x] Create `app/services/exercise_service.py`
+- [x] Create `app/api/v1/exercises.py`
+  - [x] GET /exercises - List exercises (with filters)
+  - [x] GET /exercises/{id} - Get exercise details
+  - [x] POST /exercises - Create exercise
+  - [x] PUT /exercises/{id} - Update exercise
+  - [x] DELETE /exercises/{id} - Delete exercise
 
 ### 4. Workout Plan Management
 - [ ] Create `app/services/workout_service.py`
@@ -305,3 +305,7 @@ uvicorn app.main:app --reload
 ---
 
 **Current Status**: Database and schemas complete. Next: Authentication system.
+
+
+<!-- test@example.com
+mypassword123 -->
